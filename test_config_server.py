@@ -8,8 +8,11 @@ from httplib2 import Http
 
 class TestConfigServer(unittest.TestCase):
 
-    def call_config_service(self,serviceName,serviceEnv):
+    def call_config_service(self,serviceName,serviceEnv): 
          targetUri = "http://{}:5555/api/configserver/{}/{}".format(containerIP,serviceName,serviceEnv)
+         
+         print "Running config service platform tests against target URI: {}".targetUri
+         
          http_obj = Http(".cache")
          (resp, content) = http_obj.request(
          uri=targetUri,
