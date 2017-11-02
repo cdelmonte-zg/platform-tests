@@ -35,7 +35,7 @@ def retrieve_oauth_service():
     content = http.request(
             uri=targetUri,
             method="POST",
-            headers={'Content-type': 'application/x-www-form-urlencoded', 'Authorization': 'Basic ZWFnbGVleWU6dGhpc2lzc2VjcmV0'},
+            headers={'Content-type': 'application/x-www-form-urlencoded', 'Authorization': 'Basic Y2RlbG1vbnRlOnRoaXNpc3NlY3JldA=='},
             body=urllib.urlencode(body))
     results = json.loads(content[1])
     return results.get("access_token")
