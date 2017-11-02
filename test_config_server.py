@@ -10,9 +10,6 @@ class TestConfigServer(unittest.TestCase):
 
     def call_config_service(self,serviceName,serviceEnv): 
          targetUri = "http://{}:5555/api/configserver/{}/{}".format(containerIP,serviceName,serviceEnv)
-         
-         print(targetUri)
-         
          http_obj = Http(".cache")
          (resp, content) = http_obj.request(
          uri=targetUri,
@@ -52,8 +49,6 @@ class TestConfigServer(unittest.TestCase):
          self.assertEqual(resp.status, 200)
          self.assertEquals("https://github.com/cdelmonte-zg/config-repo/planetservice/planetservice-aws-dev.yml",
                            results["propertySources"][0]["name"])
-
-
 
 
 if __name__ == '__main__':

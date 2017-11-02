@@ -34,6 +34,15 @@ class TestEurekaServer(unittest.TestCase):
 
     def test_zuulservice(self):
         self.assert_eureka_service("ZUULSERVICE")
+        
+    def test_authenticationservice(self):
+        self.assert_eureka_service("AUTHENTICATIONSERVICE")
+
+    def test_alienservice(self):
+        self.assert_eureka_service("ALIENSERVICE")
+
+    def test_planetservice(self):
+        self.assert_eureka_service("PLANETSERVICE")
 
 if __name__ == '__main__':
     containerIP = os.getenv('CONTAINER_IP',"192.168.99.100")
