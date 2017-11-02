@@ -11,7 +11,7 @@ class TestConfigServer(unittest.TestCase):
     def call_config_service(self,serviceName,serviceEnv): 
          targetUri = "http://{}:5555/api/configserver/{}/{}".format(containerIP,serviceName,serviceEnv)
          
-         print "Running config service platform tests against target URI: {}".targetUri
+         print(targetUri)
          
          http_obj = Http(".cache")
          (resp, content) = http_obj.request(
