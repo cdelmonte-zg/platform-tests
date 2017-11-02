@@ -10,9 +10,13 @@ notifications:
   on_success: always
   on_failure: always
 script:
-  - echo "Sleeping 60 seconds to let containers warm up"
-  - sleep 60
-  - echo "Beginning platform tests"
-  - python test_config_server.py
-  - python test_eureka_server.py
-  - python test_zuul_service.py
+- echo "Sleeping 60 seconds to let containers warm up"
+- sleep 60
+- echo "Beginning platform tests"
+- python test_config_server.py
+- python test_eureka_server.py
+- python test_zuul_service.py
+env:
+  global:
+  - secure: lgAn7J88knVGrzrp24HMkNZuuLt9UVFpZUjhlmskecfdKpaycFth2G8oAf0zETtI3tcN8me8F2eIfPE3AklbJBSRzwNoX9XKCdCHmQSlgVbbyH4987q2yJpss9Y69SzJygwOa9Gc1LhTu4IMAnuHdjwlrG5ylMzmQ2nTSoz/Bma7AAzMLXL7y6wJRjchtR+RIgZ1eIyqTXuZ2rTsaOQQNR4JJK1g2r1+GdWoXR2eBeOm5nTWnZ8Edg5cx5xSk/s5y2sq5wC56+WS1jg1l+lwjKeeHgGpOIHH25gsFwsnjHddkkAC2RZdK+iUtY7OKF5E+C1zIDwbLITVTfAJJXAvFTQ3FuLwgdgR/2iCAU1X5LWVixUjSe2C1edbAW07KPkzwX9F81u8HTQYTF84vwIoxNhaPODTg1MXaO+Ru/AsYVuv8c9uGg5Jey+PeQhoVtHs8FrMzeVCTMHHcdSI9HJFj/iNtpnbQ5lV7u/7IFgNaN05xnQYeqOfaqFMj2lqIqHczNbvyfPtKrKGNprezUD/Zbw0S4VGLxdMVdlaIDqQyW0ZW4CHCBey0or+x0yy4wu4gdTi3FZMBR0nGD4NE2JOLkQFEUTKRjmXvqAB5WjuCFLcfW2wnKqlXnoddXcz336SzPk6W/t3Mi8DLfeL/vVyWuUsmJSPXNOLj9MY8C6n/BM=
+  - secure: jKfAMO+4Zz6GpXQWb9ucCxbLv/Sd8zGNmTfii1CzckdIQfBMGs68/xu2UyB0lwcQxrKVz0x6+aevcN6LfTaRjchnSptpmQUVMyUilFH9KiQ8vc7ilX8MvTMDlErk2ntPBsxeoE0fFmq9vZRxu8wYoxPRzCUmDfZO3y3SyhBi/NKOYc5C/SRRX0kUJHdbgv2fKsgTJhXON9YfGIxoiWdxLMg7ymFeM1yfzNCF3uf7eZLE3t2SMZZy5XgmnV6ZuJlLr9Mqne05vFNrLGC0IG7/DDhp0eFTkc5Y6v7D+AtFP+aRAL78/b1fhc4nwUXw0ooFSJPO/mgQrnhyjXR6pyChYIePqjEaOUqK12JAQuaFVqmK0oeGojDfX00Do5gzS4bJAYjNl5dsJjdyEjwjRD8EOJKXQdNt73yJK68IH+r8/+KhJrX1LCvDFd2PoUsWQTOXaDLxXc4JfqUFuEv5l2Fa41NH0+188LjIt2xJ6R8fLAbOM8Tm6H6KHe4tz8Qjok+vRB1iYb2OJlXRMX4iuC/6viqP11tfu/qwMEwkt1S3nIf/bztzVTMivB5sCCbYZ67DZa3+clORJ23Kj2VjhiMasMLVVincdZhpy9AMbwtNXqjbcjB4RvVjPLTNlfHkfcm0gBseuIKYodR0SHitBNywjLzZQbEOBqZtwKqTGviWL+Q=
