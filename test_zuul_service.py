@@ -25,7 +25,7 @@ class TestZuulService(unittest.TestCase):
          return resp,content
 
 def retrieve_oauth_service():
-    targetUri = "http://{}:5555/api/auth/oauth/token ".format(containerIP)
+    targetUri = "http://{}:5555/api/authenticationservice/auth/oauth/token ".format(containerIP)
     http = Http(".cache")
     body = {'grant_type': 'password',
             'scope': 'webclient',
