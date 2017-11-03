@@ -66,10 +66,10 @@ class TestZuulService(unittest.TestCase):
         (resp, content) = self.call_planet_service()
         results = json.loads(content.decode("utf-8"))
         self.assertEqual(resp.status, 200)
-        self.assertEqual("f3831f8c-c338-4ebe-a82a-e2fc1d1ff78a", results["id"])
-        self.assertEqual("dangerous", results["alienType"])
-        self.assertEqual("venusian megaloman", results["name"])
-        self.assertEqual("e254f8c-c442-4ebe-a82a-e2fc1d1ff78a", results["planetId"])
+        self.assertEqual("f3831f8c-c338-4ebe-a82a-e2fc1d1ff78a", results[0]["id"])
+        self.assertEqual("dangerous", results[0]["alienType"])
+        self.assertEqual("venusian megaloman", results[0]["name"])
+        self.assertEqual("e254f8c-c442-4ebe-a82a-e2fc1d1ff78a", results[0]["planetId"])
      
 def retrieve_oauth_service():
     targetUri = "http://{}:5555/api/authenticationservice/auth/oauth/token ".format(containerIP)
