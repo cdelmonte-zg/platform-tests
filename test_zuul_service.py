@@ -88,7 +88,7 @@ def retrieve_oauth_service():
     return results.get("access_token")
 
 if __name__ == '__main__':
-    containerIP = os.getenv('CONTAINER_IP',"192.168.99.100")
+    containerIP = os.getenv('ZUUL_CONTAINER_IP',"192.168.99.100")
     print "Running zuul service platform tests against container ip: {}".format(containerIP)
     oauthtoken = retrieve_oauth_service()
     print "OAuthToken successfully retrieved: {}".format(oauthtoken)
