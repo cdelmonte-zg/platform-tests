@@ -45,6 +45,6 @@ class TestEurekaServer(unittest.TestCase):
         self.assert_eureka_service("PLANETSERVICE")
 
 if __name__ == '__main__':
-    containerIP = os.getenv('EUREKA_CONTAINER_IP',"192.168.99.100")
+    containerIP = "18.196.20.94"
     print "Running eureka service platform tests against container ip: {}".format(containerIP)
     unittest.main()

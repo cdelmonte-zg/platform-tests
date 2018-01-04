@@ -52,6 +52,6 @@ class TestConfigServer(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    containerIP = os.getenv('ZUUL_CONTAINER_IP',"192.168.99.100")
+    containerIP = "35.156.253.72" 
     print "Running config service platform tests against container ip: {}".format(containerIP)
     unittest.main()
